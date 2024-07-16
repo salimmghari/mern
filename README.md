@@ -8,6 +8,7 @@ Technologies:
 - Node
 - Express
 - MongoDB
+- Mongoose
 - ReactJS
 - ReduxJS
 - ElectronJS
