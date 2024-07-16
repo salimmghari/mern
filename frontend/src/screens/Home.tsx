@@ -9,9 +9,6 @@ import {
 } from '../redux/app/hooks';
 import {useNavigate} from 'react-router-dom';
 import axios, {AxiosResponse} from 'axios';
-import anime from 'animejs';
-import 'chart.js/auto';
-import {Chart} from 'react-chartjs-2';
 import {logout as logoutAction} from '../redux/features/user/userSlice';
 import Layout from '../components/Layout';
 import Title from '../components/Title';
@@ -114,23 +111,6 @@ const Home = (props: HomeProps): JSX.Element => {
             navigate('/auth');
         } else {
             readNotes();
-            const animation = anime(
-                {
-                    targets: '#new-note',
-                    width: [
-                        '0%',
-                        '100%'
-                    ],
-                    opacity: [
-                        0, 
-                        1
-                    ],
-                    duration: 2000,
-                    delay: 500,
-                    easing: 'easeInOutQuad'
-                }
-            );
-            animation.play();
         }
     }, [
         dispatch, 
@@ -162,28 +142,6 @@ const Home = (props: HomeProps): JSX.Element => {
                 onTitleChange={(event: React.ChangeEvent<HTMLInputElement>) => setNewNoteTitle(event.target.value)}
                 onBodyChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => setNewNoteBody(event.target.value)}
                 create={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => createNote()}
-            />
-            <Chart 
-                className="w-full mb-8"
-                type="bar"
-                data={
-                    {
-                        labels: [
-                            'Notes',
-                        ],
-                        datasets: [
-                            {
-                                label: 'Number of Notes',
-                                backgroundColor: '#ffffff',
-                                borderColor: '#363636',
-                                borderWidth: 3,
-                                data: [
-                                    notes.length 
-                                ]
-                            }
-                        ]
-                    }
-                }
             />
             <Button 
                 className="secondary-color danger-bg-color"

@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/api/users', usersRoutes);
 app.use('/api/notes', notesRoutes);
 
-mongoose.connect('mongodb://localhost:27017/mern_and_electron_and_cordova')
+mongoose.connect('mongodb://localhost:27017/mern')
     .then(
         () => app.listen(5000)
     ).catch(

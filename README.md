@@ -1,4 +1,4 @@
-# Project MERN & Electron & Cordova
+# Project MERN
 
 Web, desktop, and mobile software
 
@@ -8,13 +8,13 @@ Technologies:
 - Node
 - Express
 - MongoDB
-- React
-- Redux
-- Electron
+- ReactJS
+- ReduxJS
+- ElectronJS
 - Cordova
 - jQuery
 - CSS
-- Tailwind
+- TailwindCSS
 - HTML
 - JSON
 - Git
