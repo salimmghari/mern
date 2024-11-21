@@ -63,11 +63,6 @@ const Auth = (props: AuthProps): JSX.Element => {
                 {
                     username: newUsername,
                     password: newPassword
-                }, {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
                 }
             ).then((response: AxiosResponse<any, any>) => {
                 localStorage.setItem('token', response.data.token);
