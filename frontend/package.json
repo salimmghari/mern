@@ -38,12 +38,14 @@
     "@types/react-dom": "^18.0.11",
     "cordova-android": "^12.0.1",
     "cordova-ios": "^7.0.1",
+    "cordova-plugin-android-permissions": "^1.1.5",
+    "cordova-plugin-network-information": "^3.0.0",
     "jest": "^27.5.1",
     "typescript": "^4.9.5"
   },
   "scripts": {
     "web": "react-scripts start",
-    "desktop": "electron ./platforms/desktop/index.js",
+    "desktop": "electron ./desktop/index.js",
     "android": "cordova run android",
     "ios": "cordova run ios",
     "build": "react-scripts build",
@@ -52,9 +54,13 @@
   },
   "cordova": {
     "platforms": [
-      "android",
-      "ios"
-    ]
+      "ios",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-android-permissions": {}
+    }
   },
   "eslintConfig": {
     "extends": [

@@ -17,7 +17,7 @@ app.use('/api/notes', notesRoutes);
 
 mongoose.connect('mongodb://localhost:27017/mern')
     .then(
-        () => app.listen(5555)
+        () => app.listen(5555, '127.0.0.1')
     ).catch(
         (error: any) => console.error(error.message)
     );
