@@ -24,7 +24,6 @@ const Auth = (props: AuthProps): JSX.Element => {
     const [newUsername, setNewUsername] = useState<string>('');
     const [newPassword, setNewPassword] = useState<string>('');
     const [confirmNewPassword, setConfirmNewPassword] = useState<string>('');
-    const [error, setError] = useState<{}>({});
 
     const navigate = useNavigate();
 
@@ -47,7 +46,7 @@ const Auth = (props: AuthProps): JSX.Element => {
                 localStorage.setItem('token', response.data.token);
                 dispatch(loginAction(response.data.token));
                 navigate('/');
-            }).catch((error: any) => setError(error));    
+            }).catch((error: any) => console.error(error));    
         }
     }
 
@@ -74,7 +73,7 @@ const Auth = (props: AuthProps): JSX.Element => {
                 localStorage.setItem('token', response.data.token);
                 dispatch(loginAction(response.data.token));
                 navigate('/');
-            }).catch((error: any) => setError(error));    
+            }).catch((error: any) => console.error(error));    
         }    
     }
 
@@ -135,7 +134,6 @@ const Auth = (props: AuthProps): JSX.Element => {
                     </Button>
                 </Form>
             )}
-            <p className="p-5">{JSON.stringify(error)}</p>
         </Layout>
     );
 }
