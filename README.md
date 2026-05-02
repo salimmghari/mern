@@ -26,10 +26,14 @@ Developed by Salim Mghari
 
 ## Launch:
 
+#### Backend:
+
 > - `cd backend/`
 > - `npm install`
 > - `npm run build`
 > - `npm run start`
+
+#### Frontend:
 
 > - `cd frontend/`
 > - `npm install`
