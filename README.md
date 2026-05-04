@@ -1,6 +1,6 @@
 # Project MERN
 
-Web, desktop, and mobile software
+Web application
 
 Technologies:
 - JavaScript
@@ -37,11 +37,11 @@ Developed by Salim Mghari
 
 > - `cd frontend/`
 > - `npm install`
-> - `cordova platform add android`
-> - `cordova platform add ios`
 > - `npm run web`
 > - `npm run desktop`
+> - `cordova platform add android`
 > - `npm run android`
+> - `cordova platform add ios`
 > - `npm run ios`
 
 ---
